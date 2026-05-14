@@ -38,7 +38,7 @@ Since this is a static webpage built purely with HTML, CSS, and JS, there is no 
 
 ## 📬 Contact Information
 
-Need a highly functional Web/AI application built from scratch? Feel free to reach out:
+Need a highly functional Web/AI application built from scratch? Feel free to reach out
 
 - **Email:** abasita33@gmail.com
 - **LinkedIn:** [Abdul Basit](https://www.linkedin.com/in/abdul-basit-761062199/)
