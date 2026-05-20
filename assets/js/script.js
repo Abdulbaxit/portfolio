@@ -48,7 +48,7 @@ const filterFunc = function (selectedValue) {
 
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (selectedValue === (filterItems[i].dataset.filterCategory || filterItems[i].dataset.category)) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -167,19 +167,22 @@ const chatMessages = document.getElementById("chat-messages");
 const PROXY_URL = "https://script.google.com/macros/s/AKfycbzt-leFjTRpXK6UVOeOOxdn-vn4h8BED6Je-F9644R4VEzTeBDVvtho_jnjGIoGb_4FCw/exec"; 
 
 const SYSTEM_PROMPT = `You are "Assistant Basit", a professional AI representing Abdul Basit. 
-Abdul is an Associate Software Engineer at Devsarch.
-Skills: Next.js, React, FastAPI, Node.js, PostgreSQL, AI Systems (LLMs/RAG), n8n Automation.
+Abdul is a Software Engineer at Techanzy, building the Implement AI platform backend.
+Skills: Next.js, React, FastAPI, Node.js, PostgreSQL, AI Systems (LLMs/RAG), Celery, n8n Automation.
 Key Projects: 
-1. Legiflow: AI legal document pipeline using Gemini (90% time reduction).
-2. Agentic AI Gatekeeper: Prompt validation and security layer.
-3. LLM Evaluator: Automated model output QA.
+1. Implement AI: FastAPI SaaS backend with JWT, Stripe billing, Celery/Redis jobs, and multi-tenant REST APIs.
+2. Legiflow: AI legal document pipeline using Gemini (90% time reduction).
+3. Agentic AI Gatekeeper: Prompt validation and security layer.
+4. LLM Evaluator: Automated model output QA.
 Keep responses concise, professional, and helpful. If you don't know something, suggest contacting Abdul directly at abasita33@gmail.com.`;
 
 const responses = {
   "tech stack": "Abdul's core stack includes Next.js, React, FastAPI, Node.js, and PostgreSQL. He also uses Python for most AI/ML tasks.",
   "skills": "He specializes in AI Systems (LLMs, RAG), Full-Stack development, and Automation workflows (n8n).",
   "contact": "You can reach Abdul at abasita33@gmail.com or through the Contact tab.",
-  "hire": "Abdul is open to Associate or Mid-level roles in AI/Full-stack Engineering. Check out his Resume tab for details!"
+  "hire": "Abdul is open to Software Engineer roles in AI/Full-stack Engineering. Check out his Resume tab for details!",
+  "implement ai": "Implement AI is Abdul's current work at Techanzy—a production FastAPI backend with PostgreSQL, Celery/Redis jobs, JWT auth, and Stripe billing APIs.",
+  "techanzy": "Abdul is a Software Engineer at Techanzy, building the Implement AI platform with FastAPI, async SQLAlchemy, and Docker/GitHub Actions CI/CD."
 };
 
 let chatHistory = []; // Stores last 5 messages for context
