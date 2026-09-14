@@ -1,0 +1,12 @@
+{
+  "name": "Abdul Basit — Software Engineer",
+  "short_name": "Abdul Basit",
+  "description": "AI systems, LLM pipelines and full-stack applications.",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#f2f0ee",
+  "theme_color": "#f2f0ee",
+  "icons": [
+    { "src": "/portfolio/assets/images/avatar.webp", "sizes": "200x200", "type": "image/webp", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Desk. Was a flat 16px bar; now a top plus a darker front edge so it
+       reads as a surface with thickness, on heavier legs that reach the floor. -->
+  <rect x="28" y="258" width="456" height="16" rx="3" fill="#4f7cff"/>
+  <rect x="28" y="272" width="456" height="13" rx="2" fill="#2b2f6b"/>
+  <rect x="72" y="285" width="22" height="184" rx="3" fill="#2b2f6b"/>
+  <rect x="418" y="285" width="22" height="184" rx="3" fill="#2b2f6b"/>
+  <rect x="72" y="285" width="7" height="184" fill="#3d4a9f"/>
+  <rect x="418" y="285" width="7" height="184" fill="#3d4a9f"/>
+
+  <!-- mug -->
+  <rect x="372" y="228" width="40" height="30" rx="5" fill="#8fdcd4"/>
+  <rect x="372" y="228" width="40" height="7" rx="3" fill="#aee8e2"/>
+  <path d="M412 234h8a11 11 0 0 1 0 22h-4" stroke="#5ecfc4" stroke-width="6" fill="none"/>
+  <ellipse cx="392" cy="259" rx="26" ry="4" fill="#2b2f6b" opacity=".25"/>
+</svg>

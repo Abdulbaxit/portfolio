@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Roboto, system-ui, sans-serif">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#58595b"/>
+    </marker>
+    <marker id="a2c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#e45447"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" rx="10" fill="#f7f6f4"/>
+
+  <text x="40" y="56" font-size="13" font-weight="700" letter-spacing="1.6" fill="#58595b">INGEST</text>
+
+  <rect x="34" y="74" width="146" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="107" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Case files</text>
+  <text x="107" y="124" text-anchor="middle" font-size="12" fill="#58595b">Wasabi / S3</text>
+
+  <rect x="222" y="74" width="146" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="295" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Extract</text>
+  <text x="295" y="124" text-anchor="middle" font-size="12" fill="#58595b">entities · structure</text>
+
+  <rect x="410" y="74" width="146" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="483" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Chunk</text>
+  <text x="483" y="124" text-anchor="middle" font-size="12" fill="#58595b">+ embed</text>
+
+  <rect x="598" y="74" width="168" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="682" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">PostgreSQL</text>
+  <text x="682" y="124" text-anchor="middle" font-size="12" fill="#58595b">chunks + metadata</text>
+
+  <path d="M180 109 H212" stroke="#58595b" stroke-width="2" marker-end="url(#a2)"/>
+  <path d="M368 109 H400" stroke="#58595b" stroke-width="2" marker-end="url(#a2)"/>
+  <path d="M556 109 H588" stroke="#58595b" stroke-width="2" marker-end="url(#a2)"/>
+
+  <text x="40" y="236" font-size="13" font-weight="700" letter-spacing="1.6" fill="#58595b">ASK</text>
+
+  <rect x="34" y="254" width="146" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="107" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Question</text>
+  <text x="107" y="304" text-anchor="middle" font-size="12" fill="#58595b">from the lawyer</text>
+
+  <rect x="222" y="238" width="200" height="102" rx="10" fill="#e45447"/>
+  <text x="322" y="274" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Scoped retrieval</text>
+  <text x="322" y="296" text-anchor="middle" font-size="12" fill="#ffd9d5">restricted to one case file</text>
+  <text x="322" y="316" text-anchor="middle" font-size="12" fill="#ffd9d5">no cross-case leakage</text>
+
+  <rect x="464" y="254" width="146" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="537" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Gemini</text>
+  <text x="537" y="304" text-anchor="middle" font-size="12" fill="#58595b">answer + citation</text>
+
+  <rect x="652" y="254" width="114" height="70" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="709" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Next.js</text>
+  <text x="709" y="304" text-anchor="middle" font-size="12" fill="#58595b">UI</text>
+
+  <path d="M180 289 H212" stroke="#e45447" stroke-width="2.5" marker-end="url(#a2c)"/>
+  <path d="M422 289 H454" stroke="#e45447" stroke-width="2.5" marker-end="url(#a2c)"/>
+  <path d="M610 289 H642" stroke="#58595b" stroke-width="2" marker-end="url(#a2)"/>
+  <path d="M682 144 V208 H322 V228" stroke="#58595b" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+
+  <rect x="34" y="392" width="732" height="62" rx="10" fill="#efedea" stroke="#dcd8d3" stroke-dasharray="5 4"/>
+  <text x="400" y="430" text-anchor="middle" font-size="14" fill="#2b2929">
+    Answers can only come from the case file in scope — the constraint is the product.
+  </text>
+</svg>

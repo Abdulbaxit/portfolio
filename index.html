@@ -3,1075 +3,569 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Basit - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <!--
-    - favicon
-  -->
+  <title>Abdul Basit — Software Engineer</title>
+  <meta name="description" content="Abdul Basit is a Software Engineer in Lahore, Pakistan. I build AI systems, LLM pipelines and full-stack applications with FastAPI, Next.js and PostgreSQL.">
+  <meta name="author" content="Abdul Basit">
+  <meta name="theme-color" content="#f2f0ee">
+  <link rel="canonical" href="https://abdulbaxit.github.io/portfolio/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulbaxit.github.io/portfolio/">
+  <meta property="og:site_name" content="Abdul Basit">
+  <meta property="og:title" content="Abdul Basit — Software Engineer">
+  <meta property="og:description" content="I build AI systems, LLM pipelines and full-stack applications. FastAPI, Next.js, PostgreSQL.">
+  <meta property="og:image" content="https://abdulbaxit.github.io/portfolio/assets/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdul Basit — Software Engineer">
+  <meta name="twitter:description" content="I build AI systems, LLM pipelines and full-stack applications.">
+  <meta name="twitter:image" content="https://abdulbaxit.github.io/portfolio/assets/images/og.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://abdulbaxit.github.io/portfolio/#person",
+        "name": "Abdul Basit",
+        "jobTitle": "Software Engineer",
+        "url": "https://abdulbaxit.github.io/portfolio/",
+        "email": "mailto:abasita33@gmail.com",
+        "telephone": "+92-315-9093344",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Lahore Garrison University" },
+        "worksFor": { "@type": "Organization", "name": "Techanzy", "url": "https://implementai.io/" },
+        "knowsAbout": ["FastAPI","Python","Next.js","React","TypeScript","PostgreSQL","Celery","Docker","LLM pipelines","Retrieval-augmented generation","n8n automation"],
+        "sameAs": ["https://github.com/Abdulbaxit","https://www.linkedin.com/in/abdul-basit-761062199/"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Abdul Basit",
+        "url": "https://abdulbaxit.github.io/portfolio/",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://abdulbaxit.github.io/portfolio/#person" }
+      }
+    ]
+  }
+  </script>
+
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="./assets/images/avatar.webp">
+  <link rel="manifest" href="./site.webmanifest">
 
-  <!--
-    - custom css link
-  -->
+  <link rel="preload" href="./assets/fonts/roboto-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/images/portrait.webp" as="image" type="image/webp" fetchpriority="high">
+
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('./assets/fonts/roboto-latin-var.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+                     U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") d.className += " dark-mode";
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.webp" alt="Abdul Basit" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Abdul Basit">Abdul Basit</h1>
-
-          <p class="title">Software Engineer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:abasita33@gmail.com" class="contact-link">abasita33@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+923159093344" class="contact-link">+92 3159093344</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Lahore, Pakistan</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/abdul-basit-761062199/" class="social-link" target="_blank" rel="noopener noreferrer">
-              <ion-icon class="socials-icons" name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/Abdulbaxit" class="social-link" target="_blank" rel="noopener noreferrer">
-              <ion-icon class="socials-icons" name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="mailto:abasita33@gmail.com" class="social-link">
-              <ion-icon class="socials-icons" name="mail-outline"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-      <div class="scroll-progress" id="scroll-progress"></div>
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header class="hero-header">
-          <h2 class="h2 article-title">Software Engineer</h2>
-          <div class="typing-container">
-            <span class="typing-text">I build AI Systems / LLM Pipelines / Full-Stack Apps / Automation Workflows</span>
-          </div>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Abdul Basit, a Software Engineer based in Lahore, Pakistan. I build scalable web apps and
-            AI-powered systems using Next.js/React, FastAPI, and PostgreSQL.
-          </p>
-
-          <p>
-            At Techanzy, I'm building the backend for Implement AI—a production FastAPI platform with async jobs,
-            billing, and multi-tenant APIs. Previously at Devsarch, I shipped Legiflow, LLM evaluation pipelines, and
-            n8n automation, with end-to-end ownership from requirements through deployment.
-          </p>
-        </section>
-
-        <!--
-          - impact metrics
-        -->
-
-        <section class="impact">
-          <h3 class="h3 service-title">Impact & Results</h3>
-
-          <ul class="impact-list">
-            <li class="impact-item">
-              <div class="impact-content">
-                <h4 class="impact-number" data-target="90">0<span>%</span></h4>
-                <p class="impact-text">Reduction in manual legal doc processing (Legiflow AI)</p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-envelope" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 384 512"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0z"/></symbol>
+    <symbol id="i-user-tie" viewBox="0 0 448 512"><path fill="currentColor" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM224 272c-7.1 0-13.8 1.3-20.1 3.6l5.3 12.5 17.3 40.8 17.3-40.8 5.3-12.5c-6.3-2.3-13-3.6-20.1-3.6z"/></symbol>
+    <symbol id="i-comment" viewBox="0 0 512 512"><path fill="currentColor" d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32 0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9-1.9 24.5-11.4 47.4-21.4 66.1-5.3 9.9-1.2 21.9 8.6 27.2 6.1 3.3 13.4 2.8 19.1-.7 16.8-10.3 39.6-24.2 49.9-31 18.8 6.2 39 9.6 60.1 9.6z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path fill="currentColor" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.5 4.9l1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1zm13.5 13.5 1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1zM1 11h3v2H1v-2zm19 0h3v2h-3v-2zM3.5 19.1l2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4zm13.5-13.5 2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 384 512"><path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6C139.2 392 64 316.9 64 224c0-58.4 26.9-110.4 69.1-145.1 8.4-6.8 8.9-19.4.9-26.9C119.4 37.3 170.3 32 223.5 32z"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.2 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></symbol>
+    <symbol id="i-microscope" viewBox="0 0 512 512"><path fill="currentColor" d="M160 32c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V288h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h32V160c-53 0-96 43-96 96v32c0 89.1 66.2 162.7 152.5 174.4-1.6 4.9-2.5 10.1-2.5 15.6 0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48 0-5.5-.9-10.7-2.5-15.6C453.8 418.7 520 345.1 520 256V224c0-53-43-96-96-96V32c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V128h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H416c-17.7 0-32-14.3-32-32V32z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 640 512"><path fill="currentColor" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312v-24c0-13.3 10.7-24 24-24s24 10.7 24 24v24h24c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v24c0 13.3-10.7 24-24 24s-24-10.7-24-24V360H504c-13.3 0-24-10.7-24-24s10.7-24 24-24h0z"/></symbol>
+    <symbol id="i-seedling" viewBox="0 0 512 512"><path fill="currentColor" d="M64 96v64c0 106 86 192 192 192h16v64H80c-8.8 0-16 7.2-16 16s7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H272V352h16c106 0 192-86 192-192V96c0-17.7-14.3-32-32-32H352c-38.6 0-74 12.8-102.1 34.3C226.1 76.8 190.6 64 152 64H96C78.3 64 64 78.3 64 96z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 384 512"><path fill="currentColor" d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c17.2 0 29.9 16.1 25.8 32.9L230.7 160H297c17.4 0 30.3 16.5 25.7 33.4l-88 304c-4.7 16.2-21.8 24.4-37.4 18.3s-23.3-21.8-18.6-38L225.3 320H159c-17.4 0-30.3-16.5-25.7-33.4L0 256z"/></symbol>
+  </svg>
+
+  <div class="spinner-screen" id="boot" aria-hidden="true">
+    <div class="spinner-wrapper"><div class="spinner"></div></div>
+  </div>
+
+  <div class="page-bg">
+    <div class="card-shell">
+      <div class="card-row">
+
+        <div>
+          <div class="w-32">
+            <a href="#main" class="mark" aria-label="Abdul Basit">ab<span>.</span></a>
+            <div class="md:mt-64">
+              <div class="md:h-6 md:w-6 hidden md:block">
+                <a href="https://www.linkedin.com/in/abdul-basit-761062199/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg class="icon icon-2xl" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                </a>
               </div>
-            </li>
-
-            <li class="impact-item">
-              <div class="impact-content">
-                <h4 class="impact-number" data-target="100">0<span>+</span></h4>
-                <p class="impact-text">Automated employee onboardings via n8n & Node.js</p>
+              <div class="md:h-6 md:w-6 md:mt-5 hidden md:block">
+                <a href="https://github.com/Abdulbaxit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg class="icon icon-2xl" aria-hidden="true"><use href="#i-github"></use></svg>
+                </a>
               </div>
-            </li>
-
-            <li class="impact-item">
-              <div class="impact-content">
-                <h4 class="impact-number" data-target="15">0<span>+</span></h4>
-                <p class="impact-text">Production systems maintained with 99% uptime</p>
+              <div class="md:h-6 md:w-6 md:mt-5 hidden md:block">
+                <a href="mailto:abasita33@gmail.com" aria-label="Email">
+                  <svg class="icon icon-2xl" aria-hidden="true"><use href="#i-envelope"></use></svg>
+                </a>
               </div>
-            </li>
-          </ul>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <ion-icon name="code-slash-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Full-stack development</h4>
-
-                <p class="service-item-text">
-                  Building Next.js/React frontends with FastAPI/Node.js backends and PostgreSQL databases.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <ion-icon name="hardware-chip-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">LLM / AI features</h4>
-
-                <p class="service-item-text">
-                  Document analysis, entity extraction, and chat experiences constrained to verified source files.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <ion-icon name="git-network-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Automation (n8n)</h4>
-
-                <p class="service-item-text">
-                  Designing onboarding workflows and integrations to reduce manual setup time.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <ion-icon name="server-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">APIs & databases</h4>
-
-                <p class="service-item-text">
-                  Designing reliable APIs and structured data models with PostgreSQL and SQL.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - AI Demo (Chat)
-        -->
-
-        <section class="ai-demo">
-          <h3 class="h3 service-title">Interactive AI Demo</h3>
-          
-          <div class="chat-container">
-            <div class="chat-header">
-              <div class="dot active"></div>
-              <span>Assistant Basit (AI)</span>
-            </div>
-
-            <div class="chat-messages" id="chat-messages">
-              <div class="message system">
-                Hello! I'm a mini-version of Abdul's AI. Ask me about his tech stack or recent work!
-              </div>
-            </div>
-
-            <div class="chat-input-area">
-              <input type="text" id="chat-input" placeholder="Try: 'What is your tech stack?' or 'Tell me about Legiflow'" autocomplete="off">
-              <button id="chat-send">
-                <ion-icon name="send-outline"></ion-icon>
-              </button>
-            </div>
-          </div>
-        </section>
-
-
-        <!--
-          - featured projects
-        -->
-
-        <section class="projects">
-
-          <h3 class="h3 service-title" style="margin-bottom: 20px;">Featured Projects</h3>
-
-          <ul class="project-list" style="margin-bottom: 30px;">
-
-            <li class="project-item active"
-                data-modal-btn
-                data-title="Implement AI"
-                data-category="Techanzy / AI SaaS Platform"
-                data-icon="cloud-outline"
-                data-problem="The product needed a production-grade backend for an AI SaaS platform with secure auth, billing, and reliable async processing."
-                data-solution="Built a FastAPI backend with async SQLAlchemy, PostgreSQL (Alembic), JWT auth, and Celery/RabbitMQ/Redis jobs—plus REST APIs for orgs, RBAC, Stripe webhooks, documents, CRM, and scheduling."
-                data-impact="Shipped multi-tenant APIs and background-job infrastructure via Docker and GitHub Actions for core product workflows."
-                data-tech="FastAPI,PostgreSQL,Celery,Redis,Docker,Stripe"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="cloud-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Implement AI</h3>
-                <p class="project-category">Techanzy / AI SaaS Platform</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" 
-                data-modal-btn
-                data-title="Happy Fish"
-                data-category="Live Web Application"
-                data-icon="globe-outline"
-                data-problem="Client needed a high-performance web platform to manage their unique digital assets and user interactions."
-                data-solution="Built a scalable Next.js frontend with an optimized PostgreSQL backend, focusing on real-time data synchronization."
-                data-impact="Successfully launched and scaled to support their growing user base with sub-second response times."
-                data-tech="Next.js,React,PostgreSQL,Tailwind"
-                data-link="https://happyfish.voltade.com">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="globe-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Happy Fish</h3>
-                <p class="project-category">Live Web Application</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active"
-                data-modal-btn
-                data-title="Overmugged Portal"
-                data-category="Client Dashboard"
-                data-icon="laptop-outline"
-                data-problem="A boutique education firm required a centralized dashboard to manage student enrollments and resource delivery."
-                data-solution="Engineered a secure portal with React and Node.js, featuring automated billing and role-based access control."
-                data-impact="Reduced administrative overhead by 40% through automated scheduling and payment tracking."
-                data-tech="React,Node.js,Express,PostgreSQL"
-                data-link="https://overmugged.voltade.com">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="laptop-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Overmugged Portal</h3>
-                <p class="project-category">Client Dashboard</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active"
-                data-modal-btn
-                data-title="Yat Guan"
-                data-category="Enterprise Web App"
-                data-icon="server-outline"
-                data-problem="An enterprise client needed to migrate their legacy inventory systems to a modern, cloud-based architecture."
-                data-solution="Developed a custom ERP solution focusing on inventory tracking and supply chain visibility."
-                data-impact="Modernized operations for a multi-regional team, improving data accuracy across departments."
-                data-tech="Next.js,Hono,Drizzle ORM,AWS"
-                data-link="https://yatguan.voltade.com">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="server-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Yat Guan</h3>
-                <p class="project-category">Enterprise Web App</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!--
-          - hire me cta
-        -->
-        <section class="cta" style="margin-top: 30px;">
-          <div class="cta-card" style="background: var(--bg-gradient-jet); padding: 30px; border-radius: 20px; border: 1px solid var(--jet); text-align: center; box-shadow: var(--shadow-3);">
-            <h3 class="h3 cta-title" style="margin-bottom: 10px;">Ready to build something amazing?</h3>
-            <p class="cta-text" style="color: var(--light-gray-70); margin-bottom: 25px;">I'm currently open to new opportunities and interesting AI/Full-stack projects.</p>
-            
-            <div class="cta-actions" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-              <a href="mailto:abasita33@gmail.com" class="cta-btn primary" style="background: var(--bg-gradient-yellow-1); color: var(--orange-yellow-crayola); padding: 12px 25px; border-radius: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition-1);">
-                <ion-icon name="mail-outline"></ion-icon>
-                <span>Hire Me</span>
-              </a>
-              <button class="cta-btn secondary" id="copy-email" style="background: var(--onyx); color: var(--white-2); border: 1px solid var(--jet); padding: 12px 25px; border-radius: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition-1);">
-                <ion-icon name="copy-outline"></ion-icon>
-                <span id="copy-text">Copy Email</span>
-              </button>
-            </div>
-          </div>
-        </section>
-
-      </article>
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; padding-top: 20px;">
-          <h2 class="h2 article-title" style="margin-bottom: 0;">Resume</h2>
-          <a href="./Abdulbasit CV.docx" download class="download-cv-btn" style="
-            background: var(--bg-gradient-yellow-1);
-            color: var(--orange-yellow-crayola);
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid var(--jet);
-            transition: var(--transition-1);
-            position: relative;
-            z-index: 10;
-          ">
-            <ion-icon name="download-outline"></ion-icon>
-            Download CV
-          </a>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lahore Garrison University</h4>
-
-              <span>2020 — 2024</span>
-
-              <p class="timeline-text">
-                BSc Software Engineering • CGPA 3.06.<br>
-                Relevant coursework: Data Structures & Algorithms, Web Development, Databases, Machine Learning, Software
-                Engineering.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer — Techanzy</h4>
-
-              <span>Apr 2026 — Present</span>
-
-              <p class="timeline-text">
-                <strong>Implement AI:</strong> built and maintained a Python FastAPI backend with async SQLAlchemy,
-                PostgreSQL (Alembic), JWT auth, and Celery/RabbitMQ/Redis background jobs; shipped via Docker and GitHub
-                Actions.<br>
-                Delivered REST APIs across product areas—orgs, RBAC, Stripe billing webhooks, documents, CRM/teams, and
-                scheduling—using Pydantic settings and dependency injection.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Associate Software Engineer — Devsarch</h4>
-
-              <span>Mar 2025 — Apr 2026</span>
-
-              <p class="timeline-text">
-                Legiflow (AI for legal documents): built entity extraction, structured storage, and a case-file-only
-                chatbot (Next.js, FastAPI, Gemini, Wasabi/S3).<br>
-                LLM Evaluator (Turing): maintained evaluation pipelines and validated DB state pre/post runs (FastAPI,
-                PostgreSQL, tool calling).<br>
-                n8n Automation (employee onboarding): designed onboarding workflows integrating internal tools and
-                notifications.<br>
-                Client communication and end-to-end ownership from requirements to deployment and maintenance.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Full Stack Developer (Part-time, Remote) — Voltade</h4>
-
-              <span>Oct 2025 — Apr 2026</span>
-
-              <p class="timeline-text">
-                Contributed to client projects including Happy Fish, Yat Guan, and Overmugged—implementing features
-                across React, Vite, Mantine, Hono/Node.js APIs, and PostgreSQL (Drizzle ORM).
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Python Programming Intern — HiSky Tech (Remote)</h4>
-
-              <span>Jul 2023 — Aug 2023</span>
-
-              <p class="timeline-text">
-                1-month remote internship focused on Python programming.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Tech Stack</h3>
-
-          <ul class="tech-stack-grid">
-            <li class="tech-stack-item"><ion-icon name="logo-python"></ion-icon> Python</li>
-            <li class="tech-stack-item"><ion-icon name="logo-react"></ion-icon> React</li>
-            <li class="tech-stack-item">Next.js</li>
-            <li class="tech-stack-item"><ion-icon name="logo-javascript"></ion-icon> TypeScript</li>
-            <li class="tech-stack-item"><ion-icon name="logo-nodejs"></ion-icon> Node.js</li>
-            <li class="tech-stack-item">FastAPI</li>
-            <li class="tech-stack-item">PostgreSQL</li>
-            <li class="tech-stack-item">Supabase</li>
-            <li class="tech-stack-item"><ion-icon name="logo-docker"></ion-icon> Docker</li>
-            <li class="tech-stack-item"><ion-icon name="logo-github"></ion-icon> Git / GitHub</li>
-            <li class="tech-stack-item">AWS</li>
-            <li class="tech-stack-item">n8n Automation</li>
-          </ul>
-
-          <h3 class="h3 skills-title" style="margin-top: 40px;">GitHub Activity</h3>
-          
-          <div class="github-stats-box" style="display: flex; flex-direction: column; gap: 20px; background: var(--bg-gradient-jet); border-radius: 16px; border: 1px solid var(--jet); padding: 30px; align-items: center; box-shadow: var(--shadow-2); text-align: center;">
-            <p class="service-item-text" style="margin-bottom: 20px; max-width: 400px;">
-              The external stats service is currently experiencing high traffic. You can view my live coding activity, commits, and open-source contributions directly on my profile.
-            </p>
-            <a href="https://github.com/Abdulbaxit" target="_blank" class="download-cv-btn" style="
-              background: var(--bg-gradient-yellow-1);
-              color: var(--orange-yellow-crayola);
-              padding: 12px 25px;
-              border-radius: 12px;
-              font-size: 15px;
-              font-weight: 600;
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              border: 1px solid var(--jet);
-              transition: var(--transition-1);
-              text-decoration: none;
-            ">
-              <ion-icon name="logo-github" style="font-size: 20px;"></ion-icon>
-              View GitHub Profile ↗
-            </a>
-          </div>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>AI</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Machine learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>AI</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Machine learning</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item active" data-filter-item data-filter-category="ai"
-                data-modal-btn
-                data-title="Implement AI"
-                data-category="Techanzy / AI SaaS Platform"
-                data-icon="cloud-outline"
-                data-problem="The product needed a production-grade backend for an AI SaaS platform with secure auth, billing, and reliable async processing."
-                data-solution="Built a FastAPI backend with async SQLAlchemy, PostgreSQL (Alembic), JWT auth, and Celery/RabbitMQ/Redis jobs—plus REST APIs for orgs, RBAC, Stripe webhooks, documents, CRM, and scheduling."
-                data-impact="Shipped multi-tenant APIs and background-job infrastructure via Docker and GitHub Actions for core product workflows."
-                data-tech="FastAPI,PostgreSQL,Celery,Redis,Docker,Stripe"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="cloud-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Implement AI</h3>
-                <p class="project-category">Techanzy / AI SaaS Platform</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="ai"
-                data-modal-btn
-                data-title="Agentic AI Gatekeeper"
-                data-category="AI Architecture"
-                data-icon="hardware-chip-outline"
-                data-problem="LLM applications often face security and cost issues from unformatted or malicious prompts."
-                data-solution="Designed a 'Gatekeeper' agent that intercepts and validates all incoming prompts before they hit the core model."
-                data-impact="Reduced hallucination rates and improved system security by 60% through structured validation."
-                data-tech="Gemini,LangChain,FastAPI,Redis"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="hardware-chip-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Agentic AI Gatekeeper</h3>
-                <p class="project-category">AI Architecture</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="ai"
-                data-modal-btn
-                data-title="Legiflow"
-                data-category="AI Legal Document Pipeline"
-                data-icon="document-text-outline"
-                data-problem="Legal teams manually processed thousands of pages, leading to slow turnaround times and human error."
-                data-solution="Engineered an end-to-end RAG pipeline using Google Gemini and Vector databases for high-speed legal retrieval."
-                data-impact="90% reduction in manual document processing time while maintaining 98%+ extraction accuracy."
-                data-tech="Gemini,FastAPI,Pinecone,Next.js"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="document-text-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Legiflow</h3>
-                <p class="project-category">AI Legal Document Pipeline</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="ai"
-                data-modal-btn
-                data-title="LLM Evaluator"
-                data-category="Turing / AI Quality Assurance"
-                data-icon="chatbubbles-outline"
-                data-problem="Scaling AI models required a rigorous way to evaluate model outputs against human-grade ground truth."
-                data-solution="Built automated evaluation pipelines that validate DB states and logical consistency of model responses."
-                data-impact="Enabled the team to deploy model updates with 100% confidence in regression testing."
-                data-tech="FastAPI,PostgreSQL,Pytest,Docker"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="chatbubbles-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">LLM Evaluator</h3>
-                <p class="project-category">Turing</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="machine learning"
-                data-modal-btn
-                data-title="Autism Emotion Synergy"
-                data-category="FYP / Machine Learning"
-                data-icon="pulse-outline"
-                data-problem="Children with autism often face challenges in recognizing and expressing emotions in social contexts."
-                data-solution="Developed a deep learning model to recognize facial expressions and provide real-time feedback."
-                data-impact="Successfully demonstrated a high-accuracy emotion recognition system for my Final Year Project (FYP)."
-                data-tech="Python,TensorFlow,OpenCV,Keras"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="pulse-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Autism Emotion Synergy</h3>
-                <p class="project-category">FYP / Machine Learning</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="machine learning"
-                data-modal-btn
-                data-title="Face Recognition System"
-                data-category="Computer Vision / ML"
-                data-icon="scan-outline"
-                data-problem="Manual attendance and security checks are slow and prone to errors in large organizations."
-                data-solution="Implemented a real-time face recognition system using MTCNN for detection and FaceNet for embeddings."
-                data-impact="Achieved 95%+ accuracy in identifying known individuals in various lighting conditions."
-                data-tech="Python,OpenCV,NumPy,FaceNet"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="scan-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Face Recognition System</h3>
-                <p class="project-category">Computer Vision / ML</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="ai"
-                data-modal-btn
-                data-title="Python Voice Assistant"
-                data-category="AI / Speech Recognition"
-                data-icon="mic-outline"
-                data-problem="Navigating operating systems and performing quick tasks can be inefficient through GUI alone."
-                data-solution="Created a modular voice assistant capable of opening apps, fetching news, and performing system commands via voice."
-                data-impact="Streamlined personal workflow by enabling hands-free task execution for common daily routines."
-                data-tech="Python,Pyttsx3,SpeechRecognition,API"
-                data-link="#">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="mic-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Python Voice Assistant</h3>
-                <p class="project-category">AI / Speech Recognition</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="web"
-                data-modal-btn
-                data-title="Happy Fish"
-                data-category="Voltade / Web App"
-                data-icon="globe-outline"
-                data-problem="Managing digital fish assets required a responsive and real-time dashboard for end-users."
-                data-solution="Developed a high-performance web interface with React and FastAPI, integrated with global state management."
-                data-impact="Successfully shipped a production-ready application for Voltade client work."
-                data-tech="React,FastAPI,PostgreSQL,Tailwind"
-                data-link="https://happyfish.voltade.com">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="globe-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Happy Fish</h3>
-                <p class="project-category">Voltade / Web App</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="web"
-                data-modal-btn
-                data-title="Overmugged Portal"
-                data-category="Voltade / Client Dashboard"
-                data-icon="laptop-outline"
-                data-problem="Educational service manual management led to administrative bottlenecks and scheduling conflicts."
-                data-solution="Built an automated student portal to handle bookings, resource sharing, and internal comms."
-                data-impact="Reduced manual scheduling errors by 50% and improved student engagement tracking."
-                data-tech="React,Node.js,PostgreSQL,Tailwind"
-                data-link="https://overmugged.voltade.com">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="laptop-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Overmugged Portal</h3>
-                <p class="project-category">Voltade / Client Dashboard</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-filter-category="web"
-                data-modal-btn
-                data-title="Yat Guan"
-                data-category="Voltade / Enterprise Web"
-                data-icon="server-outline"
-                data-problem="Legacy ERP software was non-responsive and difficult to use across different company branches."
-                data-solution="Modernized the enterprise portal with a mobile-first approach and a server-side state optimization."
-                data-impact="Improved operational efficiency for warehouse management and order fulfillment."
-                data-tech="Next.js,Hono,Drizzle,AWS"
-                data-link="https://yatguan.voltade.com">
-              <div class="project-card-no-img">
-                <div class="project-icon-box">
-                  <ion-icon name="server-outline"></ion-icon>
-                </div>
-                <h3 class="project-title">Yat Guan</h3>
-                <p class="project-category">Voltade / Enterprise Web</p>
-                <div class="project-link-text">Read Case Study ↗</div>
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps?q=Lahore,+Pakistan&output=embed"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="https://formsubmit.co/abasita33@gmail.com" method="POST" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    <!--
-      - project case study modal
-    -->
-
-    <div class="modal-container" data-modal-container>
-
-      <div class="overlay" data-overlay></div>
-
-      <section class="case-study-modal">
-
-        <button class="modal-close-btn" data-modal-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="modal-icon-box">
-              <ion-icon name="hardware-chip-outline" id="modal-icon"></ion-icon>
-            </div>
-            <div>
-              <h3 class="h3 modal-title" id="modal-title">Project Title</h3>
-              <p class="modal-category" id="modal-category">Project Category</p>
-            </div>
-          </div>
-
-          <div class="modal-body">
-            <div class="case-study-section">
-              <h4 class="h4">Problem</h4>
-              <p class="modal-text" id="modal-problem">Description of the problem...</p>
-            </div>
-
-            <div class="case-study-section">
-              <h4 class="h4">Solution</h4>
-              <p class="modal-text" id="modal-solution">Description of the solution...</p>
-            </div>
-
-            <div class="case-study-section">
-              <h4 class="h4">Impact</h4>
-              <p class="modal-text impact-highlight" id="modal-impact">Description of the impact...</p>
-            </div>
-
-            <div class="modal-footer">
-              <div class="tech-tags" id="modal-tech">
-                <!-- tags will be injected here -->
-              </div>
-              <a href="#" target="_blank" class="modal-link" id="modal-link">
-                <span>View Live / Repo</span>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
             </div>
           </div>
         </div>
 
-      </section>
+        <div class="md:flex-1">
+          <nav aria-label="Primary">
+            <div class="hidden md:flex">
+              <div class="text-kjColorGray dark:text-kjColorLight text-sm md:flex-1">
+                <div class="font-bold md:ml-4 inline-block py-1 px-2 f-link">
+                  <a href="mailto:abasita33@gmail.com">
+                    <svg class="icon icon-lg mr-1" aria-hidden="true"><use href="#i-envelope"></use></svg>
+                    abasita33@gmail.com
+                  </a>
+                </div>
+                <button class="cursor-pointer ml-10 dark:text-kjColorLight" type="button" id="theme-toggle" aria-label="Switch colour theme">
+                  <svg class="icon icon-lg ml-1" id="icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+                  <svg class="icon icon-lg ml-1" id="icon-moon" hidden aria-hidden="true"><use href="#i-moon"></use></svg>
+                </button>
+              </div>
+              <div>
+                <a href="#works">
+                  <span class="inline-block py-1 px-2 capitalize f-link">
+                    <svg class="icon icon-lg mr-1" aria-hidden="true"><use href="#i-file"></use></svg>
+                    works
+                  </span>
+                </a>
+                <a href="./Abdulbasit%20CV.docx" download>
+                  <span class="inline-block py-1 px-2 capitalize f-link">
+                    <svg class="icon icon-lg mr-1" aria-hidden="true"><use href="#i-user-tie"></use></svg>
+                    resume
+                  </span>
+                </a>
+                <a href="#contact">
+                  <span class="inline-block py-1 px-2 capitalize f-link">
+                    <svg class="icon icon-lg mr-1" aria-hidden="true"><use href="#i-comment"></use></svg>
+                    contact
+                  </span>
+                </a>
+              </div>
+            </div>
 
+            <span class="theme-mobile md:hidden">
+              <button class="cursor-pointer dark:text-kjColorLight" type="button" id="theme-toggle-mobile" aria-label="Switch colour theme">
+                <svg class="icon icon-lg" id="icon-sun-m" aria-hidden="true"><use href="#i-sun"></use></svg>
+                <svg class="icon icon-lg" id="icon-moon-m" hidden aria-hidden="true"><use href="#i-moon"></use></svg>
+              </button>
+            </span>
+
+            <button class="burger" type="button" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+              <svg class="icon icon-3xl" aria-hidden="true"><use href="#i-bars"></use></svg>
+            </button>
+
+            <div class="fixed top-0 left-0 w-full h-full bg-black-t-50" id="drawer-backdrop" hidden></div>
+            <div class="drawer overflow-y-auto bg-kjColorLight dark:bg-kjColorBlack shadow-2xl fixed left-0 top-0 h-full z-50 w-2/3" id="drawer" hidden>
+              <div class="h-full pt-10 px-5 relative">
+                <a href="mailto:abasita33@gmail.com">
+                  <div class="mt-3">
+                    <svg class="icon icon-lg" aria-hidden="true"><use href="#i-envelope"></use></svg>
+                    <span class="ml-4 capitalize">Email</span>
+                  </div>
+                </a>
+                <a href="./Abdulbasit%20CV.docx" download>
+                  <div class="mt-3">
+                    <svg class="icon icon-lg" aria-hidden="true"><use href="#i-user-tie"></use></svg>
+                    <span class="ml-4 capitalize">resume</span>
+                  </div>
+                </a>
+                <a href="#works" data-close-drawer>
+                  <div class="mt-3">
+                    <svg class="icon icon-lg" aria-hidden="true"><use href="#i-file"></use></svg>
+                    <span class="ml-4 capitalize">works</span>
+                  </div>
+                </a>
+                <a href="#contact" data-close-drawer>
+                  <div class="mt-3">
+                    <svg class="icon icon-lg" aria-hidden="true"><use href="#i-comment"></use></svg>
+                    <span class="ml-4 capitalize">contact</span>
+                  </div>
+                </a>
+                <div class="absolute bottom-0 mb-3">
+                  <a href="https://www.linkedin.com/in/abdul-basit-761062199/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="icon icon-lg" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                  </a>
+                  <a href="https://github.com/Abdulbaxit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="icon icon-lg ml-3" aria-hidden="true"><use href="#i-github"></use></svg>
+                  </a>
+                  <a href="mailto:abasita33@gmail.com" aria-label="Email">
+                    <svg class="icon icon-lg ml-3" aria-hidden="true"><use href="#i-envelope"></use></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <main id="main">
+
+            <header class="md:flex mt-10">
+              <div class="md:flex-1">
+                <div class="text-center md:text-left">
+                  <div class="callout top-right inline-block bg-kjColorDark text-kjColorLight shadow">
+                    It's me
+                  </div>
+                  <h1 class="text-5xl font-black leading-none mb-4" aria-label="Abdul Basit">
+                    <span class="letter" style="transition-delay:1.5s">A</span><span class="letter" style="transition-delay:1.6s">b</span><span class="letter" style="transition-delay:1.7s">d</span><span class="letter" style="transition-delay:1.8s">u</span><span class="letter" style="transition-delay:1.9s">l</span>
+                    <br>
+                    <span class="letter" style="transition-delay:2s">B</span><span class="letter" style="transition-delay:2.1s">a</span><span class="letter" style="transition-delay:2.2s">s</span><span class="letter" style="transition-delay:2.3s">i</span><span class="letter" style="transition-delay:2.4s">t</span>
+                  </h1>
+                </div>
+
+                <p class="uppercase font-bold des text-center md:text-left px-5 md:px-0">
+                  SOFTWARE ENGINEER
+                </p>
+                <p class="text-kjColorGray dark:text-kjColorLight text-sm mt-10 text-center md:text-left px-5 md:px-0 md:w-64 message">
+                  Software Developer from Lahore, Pakistan, building production backends and AI-powered systems with FastAPI, Next.js and PostgreSQL.
+                </p>
+
+                <div class="mt-10 talk-wrapper">
+                  <a href="mailto:abasita33@gmail.com">
+                    <div class="talk">
+                      <span class="talk__text">
+                        <span class="talk__l1">let's</span>
+                        <span class="talk__l2">talk</span>
+                      </span>
+                      <div class="talk-pulse" aria-hidden="true"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="mt-10 md:flex-1">
+                <figure class="hero-figure">
+                  <img
+                    class="hero-photo"
+                    src="./assets/images/portrait.webp"
+                    alt="Illustrated portrait of Abdul Basit"
+                    width="900"
+                    height="1220"
+                    fetchpriority="high"
+                    decoding="async">
+                </figure>
+              </div>
+            </header>
+
+
+            <div class="skills-pin">
+            <section class="mt-12 md:mt-32 services skills-sticky" id="skills">
+              <h1 class="capitalize text-3xl md:text-4xl font-bold leading-none">
+                my top skills
+              </h1>
+              <p class="capitalize mt-2 text-lg">what i do</p>
+              <div class="kj-border"><div class="kj-border__elips"></div></div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 rounded-lg bg-kjColorLight dark:bg-kjColorBlack border-2 border-kjColorLight skills-panel">
+                <div class="p-5 md:mx-8 services__data">
+                  <h2 class="text-lg font-black uppercase mb-3 data-2">backend</h2>
+                  <p class="mb-5 data-2">
+                    I build scalable, maintainable backends with FastAPI, async SQLAlchemy and PostgreSQL, plus Celery, RabbitMQ and Redis for the work that shouldn't happen in a request cycle.
+                  </p>
+
+                  <h2 class="text-lg font-black uppercase mb-3 data-1">frontend</h2>
+                  <p class="mb-5 data-1">
+                    Client-side applications with Next.js, React, TypeScript and Tailwind — keeping semantic markup and accessible patterns rather than bolting them on afterwards.
+                  </p>
+
+                  <div class="mt-8 see-project-btn">
+                    <a class="svg-btn" href="#works" aria-label="See my works">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60">
+                        <rect x="0" y="0" width="60" height="60" rx="30" ry="30" fill="#e45447" style="opacity:0.4"></rect>
+                        <text transform="translate(80 38)" text-anchor="middle" font-size="20" fill="#000">SEE MY WORKS</text>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="hidden lg:block illustration" aria-hidden="true">
+                  <img class="illustration__img illustration__img--1" src="./assets/images/illustrations/illustration-01.svg" alt="">
+                  <img class="illustration__img illustration__img--2" src="./assets/images/illustrations/illustration-02.svg" alt="">
+                  <img class="illustration__img illustration__img--3" src="./assets/images/illustrations/illustration-03.svg" alt="">
+                  <img class="illustration__img illustration__img--4" src="./assets/images/illustrations/illustration-04.svg" alt="">
+                  <img class="illustration__img illustration__img--5" src="./assets/images/illustrations/illustration-05.svg" alt="">
+                  <img class="illustration__img illustration__img--6" src="./assets/images/illustrations/illustration-06.svg" alt="">
+                  <img class="illustration__img illustration__img--7" src="./assets/images/illustrations/illustration-07.svg" alt="">
+                </div>
+              </div>
+            </section>
+            </div>
+
+
+            <div class="md:w-3/4 px-2 py-4 mt-12 md:mt-32 m-auto">
+              <div class="select-none mb-6 w-full">
+                <div class="px-4 relative">
+                  <div class="bg-kjColorLight dark:bg-kjColorBlack rounded-lg shadow-2xl border-2 border-kjColorLight">
+                    <div class="p-4 grid md:gap-5 grid-cols-1 md:grid-cols-2">
+                      <div class="impact">
+                        <p class="impact__kicker">Impact</p>
+                        <ul>
+                          <li class="impact__row">
+                            <span class="impact__n">90<span>%</span></span>
+                            <span class="impact__l">Cut from manual legal document processing on Legiflow</span>
+                          </li>
+                          <li class="impact__row">
+                            <span class="impact__n">100<span>+</span></span>
+                            <span class="impact__l">Employee onboardings automated with n8n and Node.js</span>
+                          </li>
+                          <li class="impact__row">
+                            <span class="impact__n">4</span>
+                            <span class="impact__l">Companies shipped to production for, since 2023</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pt-10">
+                        <div>
+                          <svg class="icon icon-lg inline-block" aria-hidden="true"><use href="#i-microscope"></use></svg>
+                          <p class="inline-block ml-1">
+                            Building
+                            <a href="https://implementai.io/" target="_blank" rel="noopener noreferrer" class="font-bold underline">implementai.io</a>
+                          </p>
+                        </div>
+                        <div>
+                          <svg class="icon icon-lg inline-block" aria-hidden="true"><use href="#i-users"></use></svg>
+                          <p class="inline-block ml-1">
+                            Shipped
+                            <a href="https://happyfish.voltade.com" target="_blank" rel="noopener noreferrer" class="font-bold underline">happyfish.voltade.com</a>
+                          </p>
+                        </div>
+                        <div class="mt-2">
+                          <svg class="icon icon-lg inline-block" aria-hidden="true"><use href="#i-seedling"></use></svg>
+                          <p class="inline-block ml-1">
+                            Shipped
+                            <a href="https://yatguan.voltade.com" target="_blank" rel="noopener noreferrer" class="font-bold underline">yatguan.voltade.com</a>
+                          </p>
+                        </div>
+                        <div class="mt-2">
+                          <svg class="icon icon-lg inline-block" aria-hidden="true"><use href="#i-bolt"></use></svg>
+                          <p class="inline-block ml-1">
+                            AI pipelines and LLM evaluation
+                          </p>
+                        </div>
+                        <div class="mt-2">
+                          <p class="inline-block ml-1">
+                            <span class="font-bold">Fun Fact:</span> For seven months I was shipping at two companies at once — Devsarch by day, Voltade on the side. Both went to production 🚀
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-4">
+                      <div class="mt-10">
+                        <div class="text-lg mb-5">
+                          <span class="font-medium uppercase">README</span>
+                          <div class="kj-border"><div class="kj-border__elips"></div></div>
+                        </div>
+
+                        <p>
+                          I'm a Software Engineer who likes the unglamorous half of the job: the queue that has to drain, the migration that has to be reversible, the endpoint that has to behave the same at 3am. Most of what I've shipped lives in that layer.
+                        </p>
+
+                        <p class="mt-2">
+                          At Techanzy I build the backend for <a href="https://implementai.io/" target="_blank" rel="noopener noreferrer" class="font-bold underline">Implement AI</a> — a production FastAPI platform with async SQLAlchemy, PostgreSQL and Alembic, JWT auth, and Celery/RabbitMQ/Redis background jobs. Before that, at Devsarch, I worked on Legiflow — entity extraction and a chatbot restricted to the case file itself.
+                        </p>
+
+                        <p class="mt-2">
+                          The through-line is that I'd rather own a system than hand it off at the boundary. Nearly everything I've worked on, I also deployed — and was still the one maintaining it months later.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <section class="mt-12 md:mt-32 services" id="works">
+              <h1 class="capitalize text-3xl md:text-4xl font-bold leading-none">My Works</h1>
+              <p class="capitalize mt-2 text-lg">few of my past and present projects</p>
+              <div class="kj-border"><div class="kj-border__elips"></div></div>
+
+              <h1 class="mt-6 text-2xl font-bold capitalize">Web Applications</h1>
+              <div class="mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                  <a class="proj" href="https://happyfish.voltade.com" target="_blank" rel="noopener noreferrer">
+                    <div class="proj__media" style="background:linear-gradient(140deg,#4a6fb5,#2f4a7d)">
+                      <span class="proj__tag">Client work · access restricted</span>
+                      <p class="proj__blurb">Customer and subscription management for a live client platform — features across the frontend and an optimised PostgreSQL layer behind it.</p>
+                    </div>
+                    <div class="proj__bar">
+                      <h2 class="proj__name">Happy Fish</h2>
+                      <p class="proj__stack">React · Vite · PostgreSQL</p>
+                    </div>
+                  </a>
+
+                  <a class="proj" href="https://yatguan.voltade.com" target="_blank" rel="noopener noreferrer">
+                    <div class="proj__media" style="background:linear-gradient(140deg,#3f7a6d,#26514a)">
+                      <span class="proj__tag">Client work · access restricted</span>
+                      <p class="proj__blurb">Replaced a legacy ERP with a mobile-first portal covering inventory tracking and order fulfilment across the client's branches.</p>
+                    </div>
+                    <div class="proj__bar">
+                      <h2 class="proj__name">Yat Guan</h2>
+                      <p class="proj__stack">Next.js · Hono · Drizzle</p>
+                    </div>
+                  </a>
+
+                  <a class="proj" href="https://overmugged.voltade.com" target="_blank" rel="noopener noreferrer">
+                    <div class="proj__media" style="background:linear-gradient(140deg,#ab5838,#743722)">
+                      <span class="proj__tag">Client work · access restricted</span>
+                      <p class="proj__blurb">Student bookings, resource delivery and internal comms in one dashboard, with role-based access replacing manual scheduling.</p>
+                    </div>
+                    <div class="proj__bar">
+                      <h2 class="proj__name">Overmugged Portal</h2>
+                      <p class="proj__stack">React · Node.js · PostgreSQL</p>
+                    </div>
+                  </a>
+
+                  <a class="proj" href="https://implementai.io/" target="_blank" rel="noopener noreferrer">
+                    <div class="proj__media proj__media--diagram">
+                      <img src="./assets/images/arch/implementai.svg" loading="lazy"
+                           alt="Implement AI architecture: a Next.js client calls FastAPI, which reads PostgreSQL with Alembic migrations, pushes jobs onto RabbitMQ for Celery workers backed by Redis, and receives Stripe billing webhooks.">
+                    </div>
+                    <div class="proj__bar">
+                      <h2 class="proj__name">Implement AI</h2>
+                      <p class="proj__stack">FastAPI · PostgreSQL · Celery</p>
+                    </div>
+                  </a>
+
+                </div>
+              </div>
+
+              <h1 class="mt-6 text-2xl font-bold capitalize">AI Systems</h1>
+              <div class="mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                  <div class="proj">
+                    <div class="proj__media proj__media--diagram">
+                      <img src="./assets/images/arch/legiflow.svg" loading="lazy"
+                           alt="Legiflow architecture: case files from Wasabi or S3 are extracted, chunked, embedded and stored in PostgreSQL; a lawyer's question goes through retrieval scoped to a single case file before Gemini answers with a citation.">
+                    </div>
+                    <div class="proj__bar">
+                      <h2 class="proj__name">Legiflow</h2>
+                      <p class="proj__stack">FastAPI · Gemini · Next.js</p>
+                    </div>
+                  </div>
+
+                  <div class="proj">
+                    <div class="proj__media proj__media--diagram">
+                      <img src="./assets/images/arch/llm-evaluator.svg" loading="lazy"
+                           alt="LLM Evaluator architecture: database state is snapshotted before and after a run of the model with its tool calls, then diffed and asserted against, acting as a regression gate.">
+                    </div>
+                    <div class="proj__bar">
+                      <h2 class="proj__name">LLM Evaluator</h2>
+                      <p class="proj__stack">FastAPI · PostgreSQL · Pytest</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="max-w-xl shadow-2xl h-40 py-5 md:py-0 px-5 md:px-10 mt-10 md:flex justify-between items-center">
+                <p class="text-lg font-bold mb-3 md:mb-0">I cook with these ingredients 👉</p>
+                <a class="svg-btn" href="./Abdulbasit%20CV.docx" download aria-label="My resume">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60">
+                    <rect x="0" y="0" width="60" height="60" rx="30" ry="30" fill="#e45447" style="opacity:0.4"></rect>
+                    <text transform="translate(80 38)" text-anchor="middle" font-size="20" fill="#000">MY RESUME</text>
+                  </svg>
+                </a>
+              </div>
+            </section>
+
+
+            <section class="max-w-xs m-auto mt-12 md:mt-32 text-center" id="contact">
+              <div class="capitalize font-bold text-lg">keep in touch</div>
+              <div class="text-gray-600 text-sm mt-8">Lahore, Pakistan</div>
+              <div class="mt-4 font-medium text-xl">
+                <a href="mailto:abasita33@gmail.com">abasita33@gmail.com</a>
+              </div>
+              <div class="mt-12 flex justify-center">
+                <div class="w-8 h-8 rounded-full">
+                  <a href="https://www.linkedin.com/in/abdul-basit-761062199/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="icon icon-2xl" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                  </a>
+                </div>
+                <div class="w-8 h-8 rounded-full ml-5">
+                  <a href="https://github.com/Abdulbaxit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="icon icon-2xl" aria-hidden="true"><use href="#i-github"></use></svg>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+          </main>
+        </div>
+      </div>
     </div>
 
-  </main>
+    <div class="foot-wrap">
+      <footer class="mt-10 md:flex">
+        <div class="uppercase text-xs md:w-1/4 text-center mb-3 md:mb-0 md:text-left">
+          <a href="#main" class="mark" aria-label="Abdul Basit">ab<span>.</span></a>
+        </div>
+        <div class="text-center md:w-2/4 mb-3 md:mb-0">
+          <ul>
+            <li class="uppercase inline-block text-xs md:mr-6 py-1 px-2 f-link">
+              <a href="#works">works</a>
+            </li>
+            <li class="uppercase inline-block text-xs md:mr-6 py-1 px-2 f-link">
+              <a href="./Abdulbasit%20CV.docx" download>resume</a>
+            </li>
+            <li class="uppercase inline-block text-xs md:mr-6 py-1 px-2 f-link">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="uppercase text-center text-xs md:w-1/4">
+          <p class="py-1 px-2">© <span id="year">2026</span> abdul basit. all rights reserved</p>
+        </div>
+      </footer>
+      <div class="color-bar">
+        <div class="h-full w-1/4 bg-kjColorPrime"></div>
+        <div class="h-full w-1/4 bg-kjColorGold"></div>
+        <div class="h-full w-1/4 bg-kjColorPrimeLight"></div>
+        <div class="h-full w-1/4 bg-kjColorSecondary"></div>
+      </div>
+    </div>
+  </div>
 
+  <noscript>
+    <style>
+      .spinner-screen { display: none !important; }
+      .letter { font-size: 3rem !important; opacity: 1 !important; }
+      .callout, .des, .message, .talk-wrapper, .see-project-btn { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
 
-
-
-
-
-  <!--
-    - #PARTICLES
-  -->
-  <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; pointer-events: none;"></div>
-  
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#FFD166" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.2, "random": false },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#FFD166", "opacity": 0.1, "width": 1 },
-        "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-        "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
-      },
-      "retina_detect": true
-    });
-  </script>
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>

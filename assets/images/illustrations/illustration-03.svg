@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect x="96" y="160" width="320" height="210" rx="18" fill="#4a90d9"/>
+  <rect x="112" y="176" width="288" height="178" rx="6" fill="#1b1f24"/>
+  <rect x="128" y="196" width="120" height="8" rx="2" fill="#5ecfc4"/>
+  <rect x="128" y="212" width="88" height="8" rx="2" fill="#5ecfc4"/>
+  <rect x="128" y="232" width="140" height="8" rx="2" fill="#f5d76e"/>
+  <rect x="128" y="248" width="70" height="8" rx="2" fill="#f5d76e"/>
+  <rect x="128" y="264" width="110" height="8" rx="2" fill="#f5d76e"/>
+  <rect x="128" y="300" width="48" height="8" rx="2" fill="#e45447"/>
+  <rect x="128" y="316" width="36" height="8" rx="2" fill="#e45447"/>
+  <rect x="280" y="232" width="96" height="8" rx="2" fill="#e45447"/>
+  <rect x="280" y="248" width="80" height="8" rx="2" fill="#ec4899"/>
+  <rect x="280" y="264" width="100" height="8" rx="2" fill="#ec4899"/>
+  <rect x="280" y="280" width="72" height="8" rx="2" fill="#ec4899"/>
+  <rect x="248" y="316" width="88" height="8" rx="2" fill="#ec4899"/>
+  <path d="M112 176h288" stroke="#fff" stroke-opacity=".08" stroke-width="40"/>
+</svg>

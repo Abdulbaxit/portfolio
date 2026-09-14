@@ -1,0 +1,4 @@
+Roboto — Apache License 2.0 — https://github.com/googlefonts/roboto
+
+Latin subset retrieved from Google Fonts and self-hosted so no
+third-party request sits on the critical rendering path.

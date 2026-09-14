@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Roboto, system-ui, sans-serif">
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#58595b"/>
+    </marker>
+    <marker id="a3c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#e45447"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" rx="10" fill="#f7f6f4"/>
+
+  <rect x="34" y="196" width="156" height="96" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="112" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Snapshot</text>
+  <text x="112" y="256" text-anchor="middle" font-size="12" fill="#58595b">DB state</text>
+  <text x="112" y="274" text-anchor="middle" font-size="12" fill="#58595b">before the run</text>
+
+  <rect x="242" y="180" width="180" height="128" rx="10" fill="#e45447"/>
+  <text x="332" y="222" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Run</text>
+  <text x="332" y="248" text-anchor="middle" font-size="12" fill="#ffd9d5">model + tool calls</text>
+  <text x="332" y="268" text-anchor="middle" font-size="12" fill="#ffd9d5">exercising the</text>
+  <text x="332" y="286" text-anchor="middle" font-size="12" fill="#ffd9d5">full code path</text>
+
+  <rect x="474" y="196" width="156" height="96" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="552" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Snapshot</text>
+  <text x="552" y="256" text-anchor="middle" font-size="12" fill="#58595b">DB state</text>
+  <text x="552" y="274" text-anchor="middle" font-size="12" fill="#58595b">after the run</text>
+
+  <rect x="474" y="344" width="292" height="88" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="620" y="378" text-anchor="middle" font-size="15" font-weight="700" fill="#2b2929">Diff &amp; assert</text>
+  <text x="620" y="400" text-anchor="middle" font-size="12" fill="#58595b">did the run change what it should have,</text>
+  <text x="620" y="418" text-anchor="middle" font-size="12" fill="#58595b">and nothing it should not?</text>
+
+  <rect x="34" y="344" width="292" height="88" rx="10" fill="#efedea" stroke="#dcd8d3" stroke-dasharray="5 4"/>
+  <text x="180" y="378" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.4" fill="#58595b">REGRESSION GATE</text>
+  <text x="180" y="402" text-anchor="middle" font-size="12" fill="#2b2929">a model change ships only if</text>
+  <text x="180" y="420" text-anchor="middle" font-size="12" fill="#2b2929">every assertion still holds</text>
+
+  <path d="M190 244 H232" stroke="#e45447" stroke-width="2.5" marker-end="url(#a3c)"/>
+  <path d="M422 244 H464" stroke="#e45447" stroke-width="2.5" marker-end="url(#a3c)"/>
+  <path d="M552 292 V334" stroke="#58595b" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M474 388 H336" stroke="#58595b" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M112 292 V320 H620 V334" stroke="#58595b" stroke-width="1.6" fill="none" stroke-dasharray="5 4" opacity=".55"/>
+
+  <text x="400" y="86" text-anchor="middle" font-size="15" fill="#58595b">
+    Model output is judged against database state, not against a transcript.
+  </text>
+</svg>

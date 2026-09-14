@@ -1,381 +1,212 @@
 'use strict';
 
-
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === (filterItems[i].dataset.filterCategory || filterItems[i].dataset.category)) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
-  }
-
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let j = 0; j < pages.length; j++) {
-      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-        navigationLinks[j].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove("active");
-        navigationLinks[j].classList.remove("active");
-      }
-    }
-
-  });
-}
-
 /**
- * Typing animation logic
+ * Abdul Basit — portfolio
+ * Theme, mobile drawer, boot spinner. Motion is CSS.
  */
-const words = ["AI Systems", "LLM Pipelines", "Full-Stack Apps", "Automation Workflows"];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
 
-function typeEffect() {
-  const typingText = document.querySelector(".typing-text");
-  if (!typingText) return;
+var year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-  const currentWord = words[wordIndex];
-  const fullText = "I build " + currentWord;
-  
-  if (isDeleting) {
-    typingText.textContent = fullText.substring(0, charIndex--);
-  } else {
-    typingText.textContent = fullText.substring(0, charIndex++);
-  }
 
-  if (!isDeleting && charIndex > fullText.length) {
-    isDeleting = true;
-    setTimeout(typeEffect, 2000); // Wait at end
-  } else if (isDeleting && charIndex === 8) { // "I build " length
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    setTimeout(typeEffect, 500);
-  } else {
-    setTimeout(typeEffect, isDeleting ? 50 : 100);
+/*-----------------------------------*\
+  #BOOT
+\*-----------------------------------*/
+
+var boot = document.getElementById('boot');
+var booted = false;
+
+function dismissBoot() {
+  if (booted) return;
+  booted = true;
+  document.body.classList.add('is-ready');
+  if (boot) {
+    boot.style.opacity = '0';
+    boot.style.transition = 'opacity .4s ease';
+    setTimeout(function () {
+      if (boot.parentNode) boot.parentNode.removeChild(boot);
+    }, 400);
   }
 }
 
-/**
- * AI Chat Demo Logic - Secure Gemini Proxy Integration
- */
-const chatInput = document.getElementById("chat-input");
-const chatSend = document.getElementById("chat-send");
-const chatMessages = document.getElementById("chat-messages");
+setTimeout(dismissBoot, 4000);
 
-// --- CONFIGURATION ---
-// Paste your Google Apps Script URL here after following AI_SETUP.md
-const PROXY_URL = "https://script.google.com/macros/s/AKfycbzt-leFjTRpXK6UVOeOOxdn-vn4h8BED6Je-F9644R4VEzTeBDVvtho_jnjGIoGb_4FCw/exec"; 
+if (document.readyState === 'complete') setTimeout(dismissBoot, 400);
+else window.addEventListener('load', function () { setTimeout(dismissBoot, 400); });
 
-const SYSTEM_PROMPT = `You are "Assistant Basit", a professional AI representing Abdul Basit. 
-Abdul is a Software Engineer at Techanzy, building the Implement AI platform backend.
-Skills: Next.js, React, FastAPI, Node.js, PostgreSQL, AI Systems (LLMs/RAG), Celery, n8n Automation.
-Key Projects: 
-1. Implement AI: FastAPI SaaS backend with JWT, Stripe billing, Celery/Redis jobs, and multi-tenant REST APIs.
-2. Legiflow: AI legal document pipeline using Gemini (90% time reduction).
-3. Agentic AI Gatekeeper: Prompt validation and security layer.
-4. LLM Evaluator: Automated model output QA.
-Keep responses concise, professional, and helpful. If you don't know something, suggest contacting Abdul directly at abasita33@gmail.com.`;
 
-const responses = {
-  "tech stack": "Abdul's core stack includes Next.js, React, FastAPI, Node.js, and PostgreSQL. He also uses Python for most AI/ML tasks.",
-  "skills": "He specializes in AI Systems (LLMs, RAG), Full-Stack development, and Automation workflows (n8n).",
-  "contact": "You can reach Abdul at abasita33@gmail.com or through the Contact tab.",
-  "hire": "Abdul is open to Software Engineer roles in AI/Full-stack Engineering. Check out his Resume tab for details!",
-  "implement ai": "Implement AI is Abdul's current work at Techanzy—a production FastAPI backend with PostgreSQL, Celery/Redis jobs, JWT auth, and Stripe billing APIs.",
-  "techanzy": "Abdul is a Software Engineer at Techanzy, building the Implement AI platform with FastAPI, async SQLAlchemy, and Docker/GitHub Actions CI/CD."
-};
+/*-----------------------------------*\
+  #THEME
+\*-----------------------------------*/
 
-let chatHistory = []; // Stores last 5 messages for context
-
-function addMessage(text, sender) {
-  const msg = document.createElement("div");
-  msg.className = `message ${sender}`;
-  msg.textContent = text;
-  chatMessages.appendChild(msg);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-  
-  if (sender !== "system-loading") {
-    chatHistory.push({ role: sender === "user" ? "user" : "model", text: text });
-    if (chatHistory.length > 10) chatHistory.shift(); 
-  }
-  return msg;
-}
-
-async function callGeminiProxy(prompt) {
-  if (!PROXY_URL) return null; // Fallback to mock if no proxy URL
-
-  try {
-    const response = await fetch(PROXY_URL, {
-      method: "POST",
-      body: JSON.stringify({
-        prompt: prompt,
-        history: [{ role: "user", text: SYSTEM_PROMPT }, ...chatHistory]
-      })
-    });
-    const data = await response.json();
-    return data.text || data.error;
-  } catch (err) {
-    console.error("Proxy Error:", err);
-    return null;
-  }
-}
-
-async function handleChat() {
-  const userText = chatInput.value.trim();
-  if (!userText) return;
-
-  addMessage(userText, "user");
-  chatInput.value = "";
-
-  // Show Loading state
-  const loadingMsg = addMessage("Thinking...", "system");
-  loadingMsg.style.opacity = "0.5";
-
-  // 1. Try Real AI via Proxy
-  const aiResponse = await callGeminiProxy(userText);
-
-  if (aiResponse) {
-    loadingMsg.textContent = aiResponse;
-    loadingMsg.style.opacity = "1";
-  } else {
-    // 2. Fallback to Keyword Mock
-    setTimeout(() => {
-      let response = "That's a great question! Abdul is passionate about that. You should check his Projects or Resume for more specifics.";
-      const lowerText = userText.toLowerCase();
-      
-      for (const key in responses) {
-        if (lowerText.includes(key)) {
-          response = responses[key];
-          break;
-        }
-      }
-      loadingMsg.textContent = response;
-      loadingMsg.style.opacity = "1";
-    }, 600);
-  }
-}
-
-if (chatSend) {
-  chatSend.addEventListener("click", handleChat);
-  chatInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") handleChat();
+function syncThemeIcons() {
+  var dark = document.documentElement.classList.contains('dark-mode');
+  ['icon-sun', 'icon-sun-m'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.hidden = dark;
+  });
+  ['icon-moon', 'icon-moon-m'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.hidden = !dark;
+  });
+  document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach(function (btn) {
+    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    btn.setAttribute('aria-pressed', String(dark));
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  typeEffect();
-  observeImpact();
-  
-  // Scroll Progress
-  const scrollProgress = document.getElementById("scroll-progress");
-  window.addEventListener("scroll", () => {
-    const totalHeight = document.body.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    if (scrollProgress) scrollProgress.style.width = progress + "%";
-  });
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark-mode');
+  var dark = document.documentElement.classList.contains('dark-mode');
+  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+  syncThemeIcons();
+}
 
-  // Copy Email
-  const copyBtn = document.getElementById("copy-email");
-  const copyText = document.getElementById("copy-text");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", () => {
-      navigator.clipboard.writeText("abasita33@gmail.com").then(() => {
-        copyText.textContent = "Email Copied!";
-        setTimeout(() => {
-          copyText.textContent = "Copy Email";
-        }, 2000);
-      });
-    });
-  }
+document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach(function (btn) {
+  btn.addEventListener('click', toggleTheme);
 });
 
-/**
- * Impact Counter Animation
- */
-function observeImpact() {
-  const counters = document.querySelectorAll(".impact-number");
-  const options = { threshold: 0.5 };
+syncThemeIcons();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, options);
 
-  counters.forEach(counter => observer.observe(counter));
+/*-----------------------------------*\
+  #DRAWER
+\*-----------------------------------*/
+
+var burger = document.getElementById('burger');
+var drawer = document.getElementById('drawer');
+var backdrop = document.getElementById('drawer-backdrop');
+
+function openDrawer() {
+  if (!drawer) return;
+  drawer.hidden = false;
+  if (backdrop) backdrop.hidden = false;
+  requestAnimationFrame(function () { drawer.classList.add('is-open'); });
+  if (burger) burger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
 }
 
-function startCounter(el) {
-  const target = +el.dataset.target;
-  const suffix = el.querySelector("span").outerHTML;
-  let current = 0;
-  const increment = target / 50;
+function closeDrawer() {
+  if (!drawer) return;
+  drawer.classList.remove('is-open');
+  if (burger) burger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+  setTimeout(function () {
+    drawer.hidden = true;
+    if (backdrop) backdrop.hidden = true;
+  }, 200);
+}
 
-  const update = () => {
-    current += increment;
-    if (current < target) {
-      el.innerHTML = Math.ceil(current) + suffix;
-      setTimeout(update, 30);
-    } else {
-      el.innerHTML = target + suffix;
-    }
+if (burger) burger.addEventListener('click', function () {
+  if (drawer && !drawer.hidden && drawer.classList.contains('is-open')) closeDrawer();
+  else openDrawer();
+});
+
+if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+document.querySelectorAll('[data-close-drawer]').forEach(function (a) {
+  a.addEventListener('click', closeDrawer);
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeDrawer();
+});
+
+
+/*-----------------------------------*\
+  #SKILLS SCROLL SCENE
+  Pin the section and assemble the desk layers, same beats as kenjimmy.xyz.
+\*-----------------------------------*/
+
+function clamp(n, a, b) {
+  return Math.max(a, Math.min(b, n));
+}
+
+function mix(from, to, t) {
+  return {
+    x: from.x + (to.x - from.x) * t,
+    y: from.y + (to.y - from.y) * t,
+    scale: from.scale + (to.scale - from.scale) * t,
+    opacity: from.opacity + (to.opacity - from.opacity) * t
   };
-  update();
 }
 
-/**
- * Project Modal functionality
- */
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-const modalTitle = document.getElementById("modal-title");
-const modalCategory = document.getElementById("modal-category");
-const modalIcon = document.getElementById("modal-icon");
-const modalProblem = document.getElementById("modal-problem");
-const modalSolution = document.getElementById("modal-solution");
-const modalImpact = document.getElementById("modal-impact");
-const modalTech = document.getElementById("modal-tech");
-const modalLink = document.getElementById("modal-link");
-
-const projectModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+function paint(el, st) {
+  el.style.transform = 'translate3d(' + st.x.toFixed(1) + 'px,' + st.y.toFixed(1) + 'px,0) scale(' + st.scale.toFixed(3) + ')';
+  el.style.opacity = String(st.opacity);
 }
 
-// add event to all project items
-const modalBtns = document.querySelectorAll("[data-modal-btn]");
+function initSkillsScene() {
+  var pin = document.querySelector('.skills-pin');
+  var section = document.getElementById('skills');
+  if (!pin || !section) return;
 
-for (let i = 0; i < modalBtns.length; i++) {
-  modalBtns[i].addEventListener("click", function () {
-    const data = this.dataset;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var wide = window.matchMedia('(min-width: 1024px)');
+  var queued = false;
+  var steps = [];
 
-    modalTitle.textContent = data.title;
-    modalCategory.textContent = data.category;
-    modalIcon.setAttribute("name", data.icon);
-    modalProblem.textContent = data.problem;
-    modalSolution.textContent = data.solution;
-    modalImpact.textContent = data.impact;
-    modalLink.setAttribute("href", data.link);
+  function collect() {
+    var q = function (sel) { return Array.prototype.slice.call(section.querySelectorAll(sel)); };
+    var vis = { scale: 1, opacity: 1, x: 0, y: 0 };
+    steps = [
+      { els: q('.illustration__img--1'), from: { scale: 0.5, opacity: 1, x: 0, y: 0 }, to: vis, a: 0, b: 0.12 },
+      { els: q('.illustration__img--2'), from: { scale: 1, opacity: 0, x: 0, y: -50 }, to: vis, a: 0.05, b: 0.16 },
+      { els: q('.illustration__img--3'), from: { scale: 1, opacity: 0, x: 0, y: -50 }, to: vis, a: 0.11, b: 0.22 },
+      { els: q('.data-1'), from: { scale: 1, opacity: 0, x: 0, y: 0 }, to: vis, a: 0.16, b: 0.36 },
+      { els: q('.illustration__img--5'), from: { scale: 1, opacity: 0, x: 100, y: 0 }, to: vis, a: 0.31, b: 0.42 },
+      { els: q('.illustration__img--6'), from: { scale: 1, opacity: 0, x: -100, y: 0 }, to: vis, a: 0.38, b: 0.49 },
+      { els: q('.data-2'), from: { scale: 1, opacity: 0, x: 0, y: 0 }, to: vis, a: 0.42, b: 0.62 },
+      { els: q('.illustration__img--4'), from: { scale: 1, opacity: 0, x: -100, y: 0 }, to: vis, a: 0.58, b: 0.69 },
+      { els: q('.illustration__img--7'), from: { scale: 1, opacity: 0, x: 100, y: 0 }, to: vis, a: 0.64, b: 0.76 },
+      { els: q('.see-project-btn'), from: { scale: 1, opacity: 0, x: 0, y: 0 }, to: vis, a: 0.78, b: 1 }
+    ];
+  }
 
-    // handle tech tags
-    modalTech.innerHTML = "";
-    const tags = data.tech.split(",");
-    tags.forEach(tag => {
-      const span = document.createElement("span");
-      span.classList.add("tech-tag");
-      span.textContent = tag.trim();
-      modalTech.appendChild(span);
+  function tick() {
+    if (!document.documentElement.classList.contains('js-skills-pin')) return;
+    var total = pin.offsetHeight - window.innerHeight;
+    var p = total <= 0 ? 1 : clamp(-pin.getBoundingClientRect().top / total, 0, 1);
+    steps.forEach(function (s) {
+      var t = s.b === s.a ? 1 : clamp((p - s.a) / (s.b - s.a), 0, 1);
+      s.els.forEach(function (el) { paint(el, mix(s.from, s.to, t)); });
     });
+  }
 
-    projectModalFunc();
-  });
+  function onScroll() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () {
+      queued = false;
+      tick();
+    });
+  }
+
+  function reset() {
+    document.documentElement.classList.remove('js-skills-pin');
+    section.querySelectorAll('.illustration__img, .data-1, .data-2, .see-project-btn').forEach(function (el) {
+      el.style.transform = '';
+      el.style.opacity = '';
+    });
+  }
+
+  function sync() {
+    if (reduced || !wide.matches) {
+      reset();
+      return;
+    }
+    collect();
+    document.documentElement.classList.add('js-skills-pin');
+    tick();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', sync, { passive: true });
+  sync();
 }
 
-// add event to close button and overlay
-modalCloseBtn.addEventListener("click", projectModalFunc);
-overlay.addEventListener("click", projectModalFunc);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSkillsScene);
+} else {
+  initSkillsScene();
+}

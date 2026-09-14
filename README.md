@@ -1,44 +1,45 @@
-# Abdul Basit - Personal Portfolio
+# Abdul Basit — Personal Portfolio
 
-A sleek, modern, and fully responsive personal portfolio website showcasing my skills, experience, and custom-built projects across Full-Stack Web Development, AI features, and Automatons.
+Personal portfolio of Abdul Basit, Software Engineer: AI systems, LLM pipelines,
+and full-stack applications.
 
-You can view the live portfolio here: **[https://abdulbaxit.github.io/portfolio/](https://abdulbaxit.github.io/portfolio/)**
+**Live:** [abdulbaxit.github.io/portfolio](https://abdulbaxit.github.io/portfolio/)
 
-## ✨ Features
+The homepage layout follows the structure of [kenjimmy.xyz](https://kenjimmy.xyz/)
+(white card on warm paper, Roboto, coral accent), with original content, portrait
+and project art.
 
-- **Modern UI/UX:** Premium dark glassmorphism design with striking neon yellow accents.
-- **Fully Responsive:** Optimized for desktops, tablets, and smartphones.
-- **Interactive Routing:** Built-in Vanilla JS router handling smooth "About," "Resume," "Portfolio," and "Contact" tabs.
-- **Live Tech Showcase:** Direct functional links pointing exactly to real deployed projects (Agentic AI gateways, AI legal document processors, LLM Evaluators, etc).
+## Design system
 
-## 🛠 Tech Stack
+| Token | Value |
+|---|---|
+| Paper | `#f2f0ee` |
+| Card | `#ffffff` |
+| Ink | `#58595b` |
+| Accent | `#e45447` |
+| Gold / secondary | `#e29d51` / `#607393` |
+| Dark | `#0d1017` |
+| Type | Self-hosted Roboto, 16px body |
 
-- **HTML5** (Semantic structuring)
-- **CSS3** (Custom Properties, Flexbox, CSS Grid)
-- **Vanilla JavaScript** (ES6+)
+## Structure
 
-## 💻 Running Locally
+```
+Hero          name, role, circular let's-talk, portrait
+Skills        backend / frontend + illustration
+Readme        status lines, fun fact, bio
+Works         screenshot cards, AI systems, resume
+Contact       email and links
+```
 
-Since this is a static webpage built purely with HTML, CSS, and JS, there is no heavy build step or compilation required.
+## Tech
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Abdulbaxit/portfolio-website.git
-   ```
-2. **Navigate into the directory:**
-   ```bash
-   cd portfolio-website
-   ```
-3. **Run a local server:** You can use Python to spin up a quick server:
-   ```bash
-   python3 -m http.server 8000
-   ```
-4. **View in browser:** Open your favorite browser and visit `http://localhost:8000`.
-   Alternatively, you can skip the server and just open `index.html` straight into your browser.
+Static HTML, CSS and vanilla JavaScript. No build step. Open `index.html` or:
 
-## 📬 Contact Information
+```bash
+python3 -m http.server 8000
+```
 
-Need a highly functional Web/AI application built from scratch? Feel free to reach out
+## Contact
 
 - **Email:** abasita33@gmail.com
 - **LinkedIn:** [Abdul Basit](https://www.linkedin.com/in/abdul-basit-761062199/)

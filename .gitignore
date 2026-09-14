@@ -1,0 +1,16 @@
+# macOS / Windows cruft
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# source art (the optimised webp variants in assets/images are what ship)
+/Generated Image*.png
+
+# phone original (assets/images/photo.webp is what ships)
+/2871.jpg

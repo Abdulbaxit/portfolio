@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Roboto, system-ui, sans-serif">
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#58595b"/>
+    </marker>
+    <marker id="a1c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#e45447"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" rx="10" fill="#f7f6f4"/>
+
+  <!-- request path -->
+  <rect x="34" y="212" width="126" height="72" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="97" y="245" text-anchor="middle" font-size="17" font-weight="700" fill="#2b2929">Client</text>
+  <text x="97" y="265" text-anchor="middle" font-size="12" fill="#58595b">Next.js</text>
+
+  <rect x="216" y="196" width="164" height="104" rx="10" fill="#e45447"/>
+  <text x="298" y="234" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">FastAPI</text>
+  <text x="298" y="256" text-anchor="middle" font-size="12" fill="#ffd9d5">async SQLAlchemy</text>
+  <text x="298" y="274" text-anchor="middle" font-size="12" fill="#ffd9d5">JWT · RBAC</text>
+
+  <!-- stores and workers -->
+  <rect x="446" y="58" width="176" height="72" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="534" y="90" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2929">PostgreSQL</text>
+  <text x="534" y="110" text-anchor="middle" font-size="12" fill="#58595b">Alembic migrations</text>
+
+  <rect x="446" y="212" width="152" height="72" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="522" y="244" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2929">RabbitMQ</text>
+  <text x="522" y="264" text-anchor="middle" font-size="12" fill="#58595b">job queue</text>
+
+  <rect x="640" y="212" width="126" height="72" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="703" y="244" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2929">Celery</text>
+  <text x="703" y="264" text-anchor="middle" font-size="12" fill="#58595b">workers</text>
+
+  <rect x="640" y="318" width="126" height="66" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="703" y="348" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2929">Redis</text>
+  <text x="703" y="367" text-anchor="middle" font-size="12" fill="#58595b">results</text>
+
+  <rect x="446" y="366" width="152" height="72" rx="10" fill="#fff" stroke="#dcd8d3"/>
+  <text x="522" y="398" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2929">Stripe</text>
+  <text x="522" y="418" text-anchor="middle" font-size="12" fill="#58595b">billing webhooks</text>
+
+  <!-- edges -->
+  <path d="M160 248 H206" stroke="#e45447" stroke-width="2.5" marker-end="url(#a1c)"/>
+  <path d="M380 226 H412 V94 H436" stroke="#58595b" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M380 248 H436" stroke="#58595b" stroke-width="2" marker-end="url(#a1)"/>
+  <path d="M380 270 H412 V402 H436" stroke="#58595b" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M598 248 H630" stroke="#58595b" stroke-width="2" marker-end="url(#a1)"/>
+  <path d="M703 284 V308" stroke="#58595b" stroke-width="2" marker-end="url(#a1)"/>
+
+  <!-- runtime -->
+  <rect x="34" y="366" width="330" height="72" rx="10" fill="#efedea" stroke="#dcd8d3" stroke-dasharray="5 4"/>
+  <text x="199" y="396" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.6" fill="#58595b">SHIPPED VIA</text>
+  <text x="199" y="418" text-anchor="middle" font-size="14" fill="#2b2929">Docker · GitHub Actions</text>
+</svg>
